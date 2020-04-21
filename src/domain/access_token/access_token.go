@@ -13,6 +13,7 @@ const (
 )
 
 type AccessToken struct{
+	ID int64`json:"access_token_id"`
 	ClientID int64 `json:"client_id"`
 	UserID int64 `json:"user_id"`
 	Token string `json:"token"`
