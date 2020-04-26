@@ -1,7 +1,7 @@
 package access_token
 
 import (
-	"github.com/saurabhjangir/bookstore_oauth-api/src/domain/errors"
+	"github.com/saurabhjangir/bookstore_oauth-api/src/utils/errors"
 	"github.com/saurabhjangir/bookstore_oauth-api/src/utils/crypto_utils"
 	"strings"
 	"time"
@@ -10,13 +10,40 @@ import (
 
 const (
 	expirationtime = 24
+	granttypePassword = "password"
+	granttypeClientcredentials = "clientcredentials"
 )
 
+type CreateTokenRequest struct{
+	GrantType string `json:"grant_type"`
+	//grant type password
+	Password string `json:"password"`
+	Email string `json:"email"`
+	// grant type client_credentials
+	ClientID string `json:"client_id"`
+	ClientSecret string `json:"client_secret"`
+}
+
+func (r *CreateTokenRequest) Validate() *errors.RestErr{
+	var err *errors.RestErr
+	switch r.GrantType {
+	// TODO:
+	case granttypePassword:
+		err = nil
+		break
+	case granttypeClientcredentials:
+		err = nil
+		break
+	default:
+		err = errors.NewRestErrBadRequest("grant type not supported")
+	}
+	return err
+}
+
 type AccessToken struct{
-	ID int64`json:"access_token_id"`
+	Token string `json:"access_token"`
 	ClientID int64 `json:"client_id"`
 	UserID int64 `json:"user_id"`
-	Token string `json:"token"`
 	Expires int64 `json:"expires"`
 }
 
