@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"github.com/gin-gonic/gin"
 	"github.com/saurabhjangir/bookstore_oauth-api/src/domain/access_token"
-	"github.com/saurabhjangir/bookstore_userapi/utils/errors"
+	"github.com/saurabhjangir/utils-lib-golang/errors"
 	"io/ioutil"
 	"net/http"
 )

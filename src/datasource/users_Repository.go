@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"github.com/mercadolibre/golang-restclient/rest"
 	"github.com/saurabhjangir/bookstore_oauth-api/src/domain/rest/user"
-	"github.com/saurabhjangir/bookstore_oauth-api/src/utils/errors"
+	"github.com/saurabhjangir/utils-lib-golang/errors"
 	"time"
 )
 const (

@@ -1,8 +1,8 @@
 package access_token
 
 import (
-	"github.com/saurabhjangir/bookstore_oauth-api/src/utils/errors"
-	"github.com/saurabhjangir/bookstore_oauth-api/src/utils/crypto_utils"
+	"github.com/saurabhjangir/utils-lib-golang/errors"
+	"github.com/saurabhjangir/utils-lib-golang/crypto_utils"
 	"strings"
 	"time"
 	"fmt"

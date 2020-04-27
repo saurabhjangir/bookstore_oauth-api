@@ -3,7 +3,7 @@ package datasource
 import (
 	"github.com/saurabhjangir/bookstore_oauth-api/src/clients/cassandra"
 	"github.com/saurabhjangir/bookstore_oauth-api/src/domain/access_token"
-	"github.com/saurabhjangir/bookstore_oauth-api/src/utils/errors"
+	"github.com/saurabhjangir/utils-lib-golang/errors"
 )
 
 const (

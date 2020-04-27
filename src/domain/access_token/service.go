@@ -3,7 +3,7 @@ package access_token
 import (
 	"fmt"
 	"github.com/saurabhjangir/bookstore_oauth-api/src/domain/rest/user"
-	"github.com/saurabhjangir/bookstore_oauth-api/src/utils/errors"
+	"github.com/saurabhjangir/utils-lib-golang/errors"
 	"strings"
 )
 
